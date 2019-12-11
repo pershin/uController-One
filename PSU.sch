@@ -14,8 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 6350 2000 2    50   Input ~ 0
-5V
 Text HLabel 2100 2500 0    50   Input ~ 0
 VIN
 $Comp
@@ -36,7 +34,7 @@ L Regulator_Linear:LM1085-5.0 U1
 U 1 1 5DCDF9DD
 P 3150 2500
 F 0 "U1" H 3150 2742 50  0000 C CNN
-F 1 "LM1085-5.0" H 3150 2651 50  0001 C CNN
+F 1 "LM1085-5.0" H 3150 2651 50  0000 C CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3150 2750 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/lm1085.pdf" H 3150 2500 50  0001 C CNN
 	1    3150 2500
@@ -83,10 +81,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lp2950-n.pdf" H 5250 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5800 3100 5800 3400
-Text HLabel 6350 3400 2    50   Input ~ 0
-GND
-Text HLabel 6350 2500 2    50   Input ~ 0
-3.3V
 Wire Wire Line
 	5250 3400 5250 2800
 Wire Wire Line
@@ -170,8 +164,6 @@ Wire Wire Line
 Wire Wire Line
 	3150 3400 3700 3400
 Wire Wire Line
-	6350 2000 4700 2000
-Wire Wire Line
 	4700 2000 4700 2500
 Wire Wire Line
 	4700 2500 4950 2500
@@ -188,14 +180,8 @@ Wire Wire Line
 Connection ~ 3150 3400
 Wire Wire Line
 	5550 2500 5800 2500
-Connection ~ 5800 3400
-Wire Wire Line
-	5800 3400 6350 3400
 Wire Wire Line
 	5800 2500 5800 2800
-Wire Wire Line
-	6350 2500 5800 2500
-Connection ~ 5800 2500
 $Comp
 L power:GND #PWR07
 U 1 1 5DCFD3DE
@@ -226,4 +212,29 @@ Wire Wire Line
 	3450 2000 3700 2000
 Wire Wire Line
 	2750 2000 2100 2000
+$Comp
+L power:+5V #PWR?
+U 1 1 5E035408
+P 4700 2000
+F 0 "#PWR?" H 4700 1850 50  0001 C CNN
+F 1 "+5V" H 4715 2173 50  0000 C CNN
+F 2 "" H 4700 2000 50  0001 C CNN
+F 3 "" H 4700 2000 50  0001 C CNN
+	1    4700 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E036BC7
+P 5800 2000
+F 0 "#PWR?" H 5800 1850 50  0001 C CNN
+F 1 "+3.3V" H 5815 2173 50  0000 C CNN
+F 2 "" H 5800 2000 50  0001 C CNN
+F 3 "" H 5800 2000 50  0001 C CNN
+	1    5800 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2500 5800 2000
+Connection ~ 5800 2500
 $EndSCHEMATC

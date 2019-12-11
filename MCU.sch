@@ -28,9 +28,6 @@ F 3 "" H 4000 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4000 1500 5300 1500
-Connection ~ 4000 1500
-Wire Wire Line
 	4000 1750 4000 1500
 $Comp
 L Device:C C6
@@ -43,87 +40,17 @@ F 3 "~" H 4000 1900 50  0001 C CNN
 	1    4000 1900
 	1    0    0    -1  
 $EndComp
-Connection ~ 9200 2550
-Wire Wire Line
-	9000 2550 9200 2550
-Wire Wire Line
-	9000 2500 9000 2550
-Wire Wire Line
-	9200 2550 9200 2600
-Wire Wire Line
-	9400 2550 9200 2550
-Wire Wire Line
-	9400 1500 9400 2550
-Wire Wire Line
-	8900 1500 9400 1500
-Wire Wire Line
-	9000 1800 9000 2200
-Wire Wire Line
-	8900 1800 9000 1800
-NoConn ~ 7900 1800
-Wire Wire Line
-	5300 1500 7900 1500
-NoConn ~ 8900 2000
-NoConn ~ 8900 1900
-Wire Wire Line
-	2500 4800 2500 4850
-Connection ~ 2500 4800
-Wire Wire Line
-	2500 4800 1350 4800
-Wire Wire Line
-	2500 4750 2500 4800
-Connection ~ 2500 1500
-Wire Wire Line
-	2500 1500 1350 1500
-Wire Wire Line
-	1450 2450 1450 2550
-$Comp
-L power:GND #PWR08
-U 1 1 5DF7514D
-P 1450 2550
-F 0 "#PWR08" H 1450 2300 50  0001 C CNN
-F 1 "GND" H 1455 2377 50  0000 C CNN
-F 2 "" H 1450 2550 50  0001 C CNN
-F 3 "" H 1450 2550 50  0001 C CNN
-	1    1450 2550
-	1    0    0    -1  
-$EndComp
-Connection ~ 1450 2050
-Wire Wire Line
-	1450 2050 1350 2050
-Wire Wire Line
-	1450 2050 1450 2150
-Wire Wire Line
-	1900 2050 1450 2050
-$Comp
-L Device:C C5
-U 1 1 5DF614CE
-P 1450 2300
-F 0 "C5" H 1565 2346 50  0000 L CNN
-F 1 "100n" H 1565 2255 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 1488 2150 50  0001 C CNN
-F 3 "~" H 1450 2300 50  0001 C CNN
-	1    1450 2300
-	1    0    0    -1  
-$EndComp
 Text Notes 5100 950  0    50   ~ 10
 USB
 Wire Notes Line
-	9700 1000 5100 1000
+	10050 1000 5100 1000
 Wire Notes Line
-	9700 2950 9700 1000
-Wire Notes Line
-	5100 2950 9700 2950
+	5100 2950 10050 2950
 Wire Notes Line
 	5100 1000 5100 2950
-Wire Wire Line
-	1450 5350 1350 5350
-Text GLabel 1450 5350 2    50   Input ~ 0
-RESET
 Connection ~ 3550 3550
 Wire Wire Line
 	3900 3550 3550 3550
-Connection ~ 5300 1500
 Wire Wire Line
 	7900 1600 5750 1600
 Wire Wire Line
@@ -202,28 +129,6 @@ Connection ~ 4900 3000
 Wire Wire Line
 	4900 2650 4900 3000
 $Comp
-L power:GND #PWR013
-U 1 1 5DD8CD6F
-P 9200 2600
-F 0 "#PWR013" H 9200 2350 50  0001 C CNN
-F 1 "GND" H 9205 2427 50  0000 C CNN
-F 2 "" H 9200 2600 50  0001 C CNN
-F 3 "" H 9200 2600 50  0001 C CNN
-	1    9200 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C11
-U 1 1 5DD87722
-P 9000 2350
-F 0 "C11" H 9115 2396 50  0000 L CNN
-F 1 "1u" H 9115 2305 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 9038 2200 50  0001 C CNN
-F 3 "~" H 9000 2350 50  0001 C CNN
-	1    9000 2350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C8
 U 1 1 5D4FEEBE
 P 4900 3250
@@ -267,8 +172,6 @@ F 3 "~" H 6200 2300 50  0001 C CNN
 	1    6200 2300
 	0    -1   -1   0   
 $EndComp
-Text HLabel 1350 5350 0    50   Input ~ 0
-RESET
 Wire Wire Line
 	3550 1500 2600 1500
 Wire Wire Line
@@ -353,7 +256,6 @@ F 3 "~" H 7100 2350 50  0001 C CNN
 	1    7100 2350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8900 2100
 Text GLabel 7100 2600 3    50   Input ~ 0
 PD0
 Text GLabel 6650 2600 3    50   Input ~ 0
@@ -506,10 +408,6 @@ Text HLabel 3900 3750 2    50   Input ~ 0
 PD0
 Wire Wire Line
 	2500 1500 2500 1750
-Text HLabel 1350 4800 0    50   Input ~ 0
-GND
-Text HLabel 1350 1500 0    50   Input ~ 0
-VCC
 Wire Wire Line
 	4400 3450 4400 3400
 Wire Wire Line
@@ -537,6 +435,115 @@ F 3 "~" H 4650 3000 50  0001 C CNN
 	1    4650 3000
 	1    0    0    -1  
 $EndComp
+Text HLabel 9000 2100 2    50   Input ~ 0
+USBGP3
+Text HLabel 9000 1900 2    50   Input ~ 0
+USBSCL
+Text HLabel 9000 2000 2    50   Input ~ 0
+USBSDA
+Wire Wire Line
+	9000 1900 8900 1900
+Wire Wire Line
+	9000 2000 8900 2000
+Wire Wire Line
+	9000 2100 8900 2100
+Connection ~ 9650 2550
+Wire Wire Line
+	9450 2550 9650 2550
+Wire Wire Line
+	9450 2500 9450 2550
+Wire Wire Line
+	9650 2550 9650 2600
+Wire Wire Line
+	9850 2550 9650 2550
+Wire Wire Line
+	9850 1500 9850 2550
+Wire Wire Line
+	9450 1800 9450 2200
+$Comp
+L power:GND #PWR013
+U 1 1 5DD8CD6F
+P 9650 2600
+F 0 "#PWR013" H 9650 2350 50  0001 C CNN
+F 1 "GND" H 9655 2427 50  0000 C CNN
+F 2 "" H 9650 2600 50  0001 C CNN
+F 3 "" H 9650 2600 50  0001 C CNN
+	1    9650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 5DD87722
+P 9450 2350
+F 0 "C11" H 9565 2396 50  0000 L CNN
+F 1 "1u" H 9565 2305 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 9488 2200 50  0001 C CNN
+F 3 "~" H 9450 2350 50  0001 C CNN
+	1    9450 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 1800 8900 1800
+Wire Wire Line
+	9850 1500 8900 1500
+$Comp
+L Device:R R7
+U 1 1 5DF1AC0A
+P 7800 1250
+F 0 "R7" H 7870 1296 50  0000 L CNN
+F 1 "1k" H 7870 1205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7730 1250 50  0001 C CNN
+F 3 "~" H 7800 1250 50  0001 C CNN
+	1    7800 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 1800 7800 1800
+Wire Wire Line
+	7800 1800 7800 1400
+Wire Wire Line
+	5300 1500 7350 1500
+Wire Notes Line
+	10050 2950 10050 1000
+Wire Wire Line
+	7800 1050 7350 1050
+Wire Wire Line
+	7800 1100 7800 1050
+Wire Wire Line
+	7350 1050 7350 1500
+Connection ~ 7350 1500
+Wire Wire Line
+	7350 1500 7900 1500
+Wire Wire Line
+	2500 4850 2500 4750
+$Comp
+L power:+5V #PWR?
+U 1 1 5E0121BF
+P 5300 1400
+F 0 "#PWR?" H 5300 1250 50  0001 C CNN
+F 1 "+5V" H 5315 1573 50  0000 C CNN
+F 2 "" H 5300 1400 50  0001 C CNN
+F 3 "" H 5300 1400 50  0001 C CNN
+	1    5300 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 1500 5300 1400
+Connection ~ 5300 1500
+$Comp
+L power:+5V #PWR?
+U 1 1 5E0186F9
+P 4000 1400
+F 0 "#PWR?" H 4000 1250 50  0001 C CNN
+F 1 "+5V" H 4015 1573 50  0000 C CNN
+F 2 "" H 4000 1400 50  0001 C CNN
+F 3 "" H 4000 1400 50  0001 C CNN
+	1    4000 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1500 4000 1400
+Connection ~ 4000 1500
 $Comp
 L MCU_Microchip_ATmega:ATmega328P-PU U3
 U 1 1 5D4FDDE1
@@ -548,4 +555,41 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20w
 	1    2500 3250
 	1    0    0    -1  
 $EndComp
+Text HLabel 1350 1950 0    50   Input ~ 0
+RESET
+Text GLabel 1450 1950 2    50   Input ~ 0
+RESET
+Wire Wire Line
+	1450 1950 1350 1950
+Wire Wire Line
+	1450 2050 1350 2050
+Connection ~ 1450 2050
+Wire Wire Line
+	1900 2050 1450 2050
+$Comp
+L Device:C C5
+U 1 1 5DF614CE
+P 1450 2300
+F 0 "C5" H 1565 2346 50  0000 L CNN
+F 1 "100n" H 1565 2255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 1488 2150 50  0001 C CNN
+F 3 "~" H 1450 2300 50  0001 C CNN
+	1    1450 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2050 1450 2150
+$Comp
+L power:GND #PWR08
+U 1 1 5DF7514D
+P 1450 2550
+F 0 "#PWR08" H 1450 2300 50  0001 C CNN
+F 1 "GND" H 1455 2377 50  0000 C CNN
+F 2 "" H 1450 2550 50  0001 C CNN
+F 3 "" H 1450 2550 50  0001 C CNN
+	1    1450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2450 1450 2550
 $EndSCHEMATC
